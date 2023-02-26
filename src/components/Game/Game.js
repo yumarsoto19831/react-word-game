@@ -7,17 +7,12 @@ import GuessResutls from '../GuessResutls/GuessResutls';
 import EndGameMessage from '../EndGameMessage/EndGameMessage';
 import { checkGuess } from '../../game-helpers';
 
-// Pick a random word on every pageload.
-let answer = sample(WORDS);
-// To make debugging easier, we'll log the solution in the console.
-console.info({ answer });
-
 function Game() {
   const [results, setResults] = React.useState([]);
   const [ended, setEnded] = React.useState(false);
   const [win, setWin] = React.useState(false);
-  const [answer, setAnswer] = React.useState(false);
-
+  const [answer, setAnswer] = React.useState(sample(WORDS));
+  console.info({ answer });
   function handleSubmitGuess(guess) {
     const guessChecked = checkGuess(guess, answer);
     setResults([...results, guessChecked]);
