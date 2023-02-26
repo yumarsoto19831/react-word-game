@@ -16,6 +16,7 @@ function Game() {
   const [results, setResults] = React.useState([]);
   const [ended, setEnded] = React.useState(false);
   const [win, setWin] = React.useState(false);
+  const [answer, setAnswer] = React.useState(false);
 
   function handleSubmitGuess(guess) {
     const guessChecked = checkGuess(guess, answer);
@@ -29,7 +30,7 @@ function Game() {
     setResults([]);
     setEnded(false);
     setWin(false);
-    answer = sample(WORDS);
+    setAnswer(sample(WORDS));
     console.info({ answer });
   }
   const isEnd = win || results.length === 6;

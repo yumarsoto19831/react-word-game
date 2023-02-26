@@ -13,7 +13,7 @@ function Guess({ guess }) {
               </span>
             );
           } else {
-            return <span key={index} className="cell"></span>;
+            return <span key={index} className="cell" />;
           }
         })}
       </p>
