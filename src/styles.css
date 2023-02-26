@@ -40,6 +40,12 @@ button {
   color: inherit;
 }
 
+.btn-reset {
+  background: cadetblue;
+  text-align: center;
+  color: white;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
